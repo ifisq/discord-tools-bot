@@ -20,4 +20,5 @@ Once you've done all that, go to line 62 on the code for main.py and change the 
 Credits:
 
 StockX command compiled and edited from: https://github.com/kxvxnc/Stockx-Discord-Bot/blob/master/stockx.py
+
 Goat command's source was taken down from github.
