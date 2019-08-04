@@ -1,0 +1,12 @@
+{
+    "bot_token": "",
+    "bot_prefix": "!",
+    "bot_embed_color": "0xe32546",
+    "bot_embed_footer_text": "Blue Development",
+    "bot_embed_logo": "https://cdn.discordapp.com/attachments/507706750661689355/602720957827645440/unknown.png",
+    "twitter_consumer_key": "",
+    "twitter_consumer_secret": "",
+    "twitter_access_token": "",
+    "twitter_access_token_secret": ""
+
+}
