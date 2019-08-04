@@ -16,6 +16,9 @@ Once you've done all of that, create a twitter developer account at https://deve
 
 Once you've done all that, go to line 62 on the code for main.py and change the field from url="https://twitter.com/bluecantcode/status/{}" to your twitter account's username. 
 
+Notes:
+
+For all of the code under async def on_message(message), make sure that you change the channel id in bot.get_channel(id=602677420495208471) to whichever success channel you're trying to post to.
 
 Credits:
 
