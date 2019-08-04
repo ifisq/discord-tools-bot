@@ -399,7 +399,7 @@ async def stockx(ctx, *args):
 	embed.add_field(name='Total Sold:', value=market['deadstockSold'], inline=True)
 	embed.add_field(name='Sales last 72 hrs:', value=market['salesLast72Hours'], inline=True)
 	embed.add_field(name='Last Sale:', value=f"${market['lastSale']} Size {market['lastSaleSize']}", inline=True)
-	#embed.add_field(name='Sizes:', value=bidasks, inline=False)
+	embed.add_field(name='Sizes:', value=bidasks, inline=False)
 	embed.set_footer(text=str(json_file["bot_embed_footer_text"]), icon_url = str(json_file["bot_embed_logo"]))
 	await ctx.send(embed=embed)
 
