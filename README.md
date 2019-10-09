@@ -2,12 +2,12 @@ Blue's Tools Bot
 
 This is an open source discord tools bot geared towards the sneaker community! It has a ton of features, including a twitter success poster, fee calculator, delay calculator, size converter, alternate gmail generator, proxy scraper, shopify link builder, bot download links, funko price searcher, stockx price searcher, goat price searcher, and an alternate address generator. 
 
-Please feel free to message me on discord at Blue#2222 if you have any questions!
+Please feel free to message me on discord at Blue#9588 if you have any questions!
 
 
 To run:
 
-Install python 3.6.8 from https://python.org
+Install python from https://python.org
 
 Once installed, run:
 pip install discord.py requests urllib3 asyncio proxybroker extruct w3lib.html beautifulsoup4 tweepy
