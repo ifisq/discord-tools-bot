@@ -1,8 +1,8 @@
 {
     "bot_token": "",
     "bot_prefix": "!",
-    "bot_embed_footer_text": "Blue Development",
-    "bot_embed_logo": "https://cdn.discordapp.com/attachments/507706750661689355/602720957827645440/unknown.png",
+    "bot_embed_footer_text": "Auroris Development",
+    "bot_embed_logo": "https://cdn.discordapp.com/icons/630602570166960128/6bdc0d2a987c4e1fa5ab63c2bf01eb43.png?size=128",
     "twitter_consumer_key": "",
     "twitter_consumer_secret": "",
     "twitter_access_token": "",
