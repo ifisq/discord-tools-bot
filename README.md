@@ -2,7 +2,7 @@ Auroris Tools Bot
 
 This is an open source discord tools bot published by the Auroris Development Team geared towards the sneaker community! It has a ton of features, including a twitter success poster, fee calculator, delay calculator, size converter, alternate gmail generator, proxy scraper, shopify link builder, bot download links, funko price searcher, stockx price searcher, goat price searcher, and an alternate address generator. 
 
-Please feel free to message me on discord at Blue#9588 if you have any questions!
+Please feel free to message me on discord at Blue#9588 if you have any questions! You can also contact us on our twitter, at  https://twitter.com/aurorisdev.
 
 
 To run:
