@@ -57,12 +57,12 @@ async def on_message(message):
 				with open(filename, 'wb') as image:
 					for chunk in request:
 						image.write(chunk)
-				tweet = twitter_api.update_with_media(filename, status="Success by {} in Blue Development \n{}".format(message.author, message.content), auto_populate_reply_metadata=True)
+				tweet = twitter_api.update_with_media(filename, status="Success by {} in Auroris Development \n{}".format(message.author, message.content), auto_populate_reply_metadata=True)
 				os.remove(filename)
-				em = discord.Embed(title="**Success posted on Twitter!**", description = "Did you leave any sensitive information? Click :wastebasket: to delete the tweet!", color = bot_embed_color, url="https://twitter.com/bluecantcode/status/{}".format(str(tweet.id)))
+				em = discord.Embed(title="**Success posted on Twitter!**", description = "Did you leave any sensitive information? Click :wastebasket: to delete the tweet!", color = bot_embed_color, url="https://twitter.com/aurorisdev/status/{}".format(str(tweet.id)))
 				em.add_field(name="User ", value="<@{}>".format(message.author.id))
 				em.set_footer(text=str(json_file["bot_embed_footer_text"]), icon_url = str(json_file["bot_embed_logo"]))
-				em.set_author(name="Blue Success", url="https://twitter.com/bluecantcode")
+				em.set_author(name="Auroris Success", url="https://twitter.com/aurorisdev")
 				sent_message = await bot.get_channel(id=602677420495208471).send(embed = em)
 				await sent_message.add_reaction("🗑")
 				bot.success_users.append(str(message.author.name) + "#" + str(message.author.discriminator))
@@ -84,7 +84,7 @@ async def on_reaction_add(reaction, user):
 				twitter_api.destroy_status(id=bot.tweet_ids[index])
 				em = discord.Embed(title="Deleted {}'s success!".format(user), color = bot_embed_color)
 				em.set_footer(text=str(json_file["bot_embed_footer_text"]), icon_url = str(json_file["bot_embed_logo"]))
-				em.set_author(name="Blue Success", url="https://twitter.com/bluecantcode")
+				em.set_author(name="Auroris Success", url="https://twitter.com/aurorisdev")
 				await bot.success_user_messages[index].delete()
 				await bot.success_messages[index].edit(embed=em)
 				del bot.success_users[index]
@@ -107,7 +107,7 @@ async def update_msg(ctx):
 
 @bot.command()
 async def help(ctx):
-	em = discord.Embed(title="Blue Help", description="", color = bot_embed_color)
+	em = discord.Embed(title="Auroris Help", description="", color = bot_embed_color)
 	em.add_field(name="Address", value = "Creates alternative addresses for the specified address. \n `!address <address>`", inline=False)
 	em.add_field(name="Delay Calculator", value = "Specifies recommended delay that should be used for your proxy and task count. \n `!delay <number of tasks> <number of proxies>`", inline=False)
 	em.add_field(name="Downloads", value = "Displays a list of bot/software downloads. \n `!downloads`", inline=False)
@@ -137,7 +137,7 @@ async def fees(ctx, price):
 	stockx_level_3 = price - (price*0.085)
 	stockx_level_4 = price - (price*0.08)
 
-	em = discord.Embed(title="Blue Fee Calculator", description="", color= bot_embed_color)
+	em = discord.Embed(title="Auroris Fee Calculator", description="", color= bot_embed_color)
 	em.add_field(name="Ebay", value= "${}".format('%.2f' % round(ebay_price, 2)), inline=False)
 	em.add_field(name="PayPal", value="${}".format('%.2f' % round(paypal_price, 2)), inline=False)
 	em.add_field(name="Goat", value="${}".format('%.2f' % round(goat_price, 2)), inline=False)
@@ -155,7 +155,7 @@ async def fees(ctx, price):
 async def delay(ctx, task_count: int, proxy_count: int):
 	delay_number = 3500/(proxy_count/task_count)
 
-	em = discord.Embed(title="Blue Delay Calculator", description="", color= bot_embed_color)
+	em = discord.Embed(title="Auroris Delay Calculator", description="", color= bot_embed_color)
 	em.add_field(name="Task Count", value = "{}".format(task_count), inline=False)
 	em.add_field(name="Proxy Count", value = "{}".format(proxy_count), inline=False)
 	em.add_field(name="Recommended Delay", value = "{} ms".format(round(delay_number)), inline=False)
@@ -164,7 +164,7 @@ async def delay(ctx, task_count: int, proxy_count: int):
 
 @bot.command(pass_context=True)
 async def size(ctx, shoe_size: float, region):
-	em = discord.Embed(title="Blue Size Converter", description="", color= bot_embed_color)
+	em = discord.Embed(title="Auroris Size Converter", description="", color= bot_embed_color)
 	em.set_footer(text=str(json_file["bot_embed_footer_text"]), icon_url = str(json_file["bot_embed_logo"]))
 
 	if region.lower() == "us":
@@ -233,7 +233,7 @@ async def gmail(ctx, account):
 
 	final_str = remove_duplicates(final_str)
 
-	em = discord.Embed(title="Blue Gmail Generator", description= "", color= bot_embed_color)
+	em = discord.Embed(title="Auroris Gmail Generator", description= "", color= bot_embed_color)
 	em.add_field(name=account, value=final_str, inline=False)
 	em.set_footer(text=str(json_file["bot_embed_footer_text"]), icon_url = str(json_file["bot_embed_logo"]))
 	await ctx.send(embed=em)
@@ -255,7 +255,7 @@ async def show(proxies):
 
 @bot.command(pass_context=True)
 async def proxies(ctx, amount: int):
-	em = discord.Embed(title="Blue Proxy Scraper", description = "Note - Proxies are scraped from public sources, so all may not be secure or fully functional.", color = 0x00a8ff)
+	em = discord.Embed(title="Auroris Proxy Scraper", description = "Note - Proxies are scraped from public sources, so all may not be secure or fully functional.", color = 0x00a8ff)
 	proxies = asyncio.Queue()
 	broker = Broker(proxies)
 	if amount < 50:
@@ -288,7 +288,7 @@ async def build(ctx, link):
 		vars.append(id)
 		title = i['title']
 		titles.append(title)
-	em = discord.Embed(title="Blue Link Builder", description=prodname, color=bot_embed_color)
+	em = discord.Embed(title="Auroris Link Builder", description=prodname, color=bot_embed_color)
 	x = 0
 	for i in titles:
 		em.add_field(name=str(i), value="[Download](https://{}/cart/{}:1)".format(site, str(vars[x])), inline=False)
@@ -301,7 +301,7 @@ async def build(ctx, link):
 
 @bot.command(pass_context=True)
 async def downloads(ctx):
-	em = discord.Embed(title="Blue Downloads", description="", color = 0x00a8ff)
+	em = discord.Embed(title="Auroris Downloads", description="", color = 0x00a8ff)
 	em.add_field(name="ANB AIO", value="[Download](http://bit.ly/ANB-AIO-Setup)")
 	em.add_field(name="ANB AIO V2", value="[Download](http://downloadsv2.aiobot.com/)")
 	em.add_field(name="BNB", value="[Download](http://bnba.io/download-bnb)")
@@ -335,7 +335,7 @@ async def pop(ctx, *args):
 
 	description_req = requests.get("https://www.poppriceguide.com" + str(link))
 
-	em = discord.Embed(title="Blue Funko Pricer", description="[{}](https://www.poppriceguide.com{})".format(str(item_name), str(link)), color=bot_embed_color)
+	em = discord.Embed(title="Auroris Funko Pricer", description="[{}](https://www.poppriceguide.com{})".format(str(item_name), str(link)), color=bot_embed_color)
 	em.add_field(name="Estimated Value", value= str(price))
 	em.set_thumbnail(url=image)
 	em.set_footer(text=str(json_file["bot_embed_footer_text"]), icon_url = str(json_file["bot_embed_logo"]))
@@ -372,9 +372,9 @@ async def stockx(ctx, *args):
 	for size in sizes:
 		bidasks +=f"Size {sizes[size]['shoeSize']} | Low Ask ${sizes[size]['market']['lowestAsk']} | High Bid ${sizes[size]['market']['highestBid']}\n"
 
-	embed = discord.Embed(title="Blue StockX", description = "[{}](https://stockx.com/{})".format(str(general['title']), str(general['urlKey'])), color=bot_embed_color)
+	embed = discord.Embed(title="Auroris StockX", description = "[{}](https://stockx.com/{})".format(str(general['title']), str(general['urlKey'])), color=bot_embed_color)
 	embed.set_thumbnail(url=results['thumbnail_url'])
-	embed.set_footer(text='Blue Utilities', icon_url = bot.user.avatar_url)
+	embed.set_footer(text='Auroris Utilities', icon_url = bot.user.avatar_url)
 	if 'styleId' in general:
 		embed.add_field(name='SKU/PID:', value=general['styleId'], inline=True)
 	else:
@@ -434,7 +434,7 @@ async def goat(ctx, *query):
 	want_count = output['hits'][0]['want_count']
 	want_count_three = output['hits'][0]['three_day_rolling_want_count']
 
-	em = discord.Embed(title="Blue GOAT Price Checker", description="", color=bot_embed_color)
+	em = discord.Embed(title="Auroris GOAT Price Checker", description="", color=bot_embed_color)
 	em.set_thumbnail(url=image)
 	em.add_field(name="Product Name", value="[{}]({})".format(name, url), inline=False)
 	em.add_field(name="Lowest Bid", value="${}".format(minimum_offer), inline=True)
@@ -500,7 +500,7 @@ async def address(ctx, *args):
 		i+=1
 	
 	final_str = "\n".join(address_array)
-	em = discord.Embed(title = "Blue Address Generator", description="{}".format(final_str), color=bot_embed_color)
+	em = discord.Embed(title = "Auroris Address Generator", description="{}".format(final_str), color=bot_embed_color)
 	em.set_footer(text=str(json_file["bot_embed_footer_text"]), icon_url = str(json_file["bot_embed_logo"]))
 	await ctx.send(embed=em)
 
