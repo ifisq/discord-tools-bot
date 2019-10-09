@@ -1,6 +1,6 @@
-Blue's Tools Bot
+Auroris Tools Bot
 
-This is an open source discord tools bot geared towards the sneaker community! It has a ton of features, including a twitter success poster, fee calculator, delay calculator, size converter, alternate gmail generator, proxy scraper, shopify link builder, bot download links, funko price searcher, stockx price searcher, goat price searcher, and an alternate address generator. 
+This is an open source discord tools bot published by the Auroris Development Team geared towards the sneaker community! It has a ton of features, including a twitter success poster, fee calculator, delay calculator, size converter, alternate gmail generator, proxy scraper, shopify link builder, bot download links, funko price searcher, stockx price searcher, goat price searcher, and an alternate address generator. 
 
 Please feel free to message me on discord at Blue#9588 if you have any questions!
 
@@ -14,7 +14,7 @@ pip install discord.py requests urllib3 asyncio proxybroker extruct w3lib.html b
 
 Once you've done all of that, create a twitter developer account at https://developer.twitter.com/ and get your twitter consumer key, twitter consumer secret, twitter access token, and twitter access token secret. Paste these into their respective fields in config.json.
 
-Once you've done all that, go to line 62 on the code for main.py and change the field from url="https://twitter.com/bluecantcode/status/{}" to your twitter account's username. 
+Once you've done all that, go to line 62 on the code for main.py and change the field from url="https://twitter.com/aurorisdev/status/{}" to your twitter account's username. 
 
 Notes:
 
