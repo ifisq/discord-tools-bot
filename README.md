@@ -10,7 +10,7 @@ To run:
 Install python from https://python.org
 
 Once installed, run:
-pip install discord.py requests urllib3 asyncio proxybroker extruct w3lib.html beautifulsoup4 tweepy
+pip install discord.py requests urllib3 asyncio proxybroker extruct w3lib beautifulsoup4 tweepy
 
 Once you've done all of that, create a twitter developer account at https://developer.twitter.com/ and get your twitter consumer key, twitter consumer secret, twitter access token, and twitter access token secret. Paste these into their respective fields in config.json.
 
